@@ -1,0 +1,15 @@
+.container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.profilePicContainer {
+    height: 100px;
+    width: 100px;
+    border: solid 0.5px #e6e6e6;
+    border-radius: 50%;
+}

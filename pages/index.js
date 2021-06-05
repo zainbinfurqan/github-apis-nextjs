@@ -1,17 +1,28 @@
-import Head from 'next/head'
-import Image from 'next/image'
+// import Head from 'next/head'
+// import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+
+  const router = useRouter()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    router.push('/profile')
+  }
+
   return (
     <div className={styles.container}>
       <div class="card" style={{ width: '18rem' }}>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <h5 class="card-title">GitHub Panel</h5>
+          <div class="form-group">
+            <label htmlFor="exampleInputEmail1">GitHub Username</label>
+            <input type="email" class="form-control mt-2 mb-2" id="exampleInputEmail1" aria-describedby="emailHelp" />
+            <button type="button" class="w-100 btn btn-primary btn-lg btn-block" onClick={handleSubmit}>Submit</button>
+            <a href='#'><small >Need Help?</small ></a>
+          </div>
         </div>
       </div>
     </div>
